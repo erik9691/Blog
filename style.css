@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+a {
+    color: rgb(232, 232, 232)
+}
+p {
+    color: rgb(232, 232, 232)
+}
+
+nav {
+    display: flex;
+    background-color: #181826;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    padding: 10px 40px 10px 20px;
+    #logo {
+        margin-right: auto;
+        img {
+            height: 3em;
+            aspect-ratio: 1/1;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
+main {
+    display: flex;
+}
+footer {
+    color: white;
+    padding: 40px 0;
+    background-color: #181826;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feed {
+    flex: 1;
+    background-color: #212134;
+}
+article {
+    background-color: #212134;
+    padding: 20px 7% 0 7%;
+    .categorias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+        text-decoration: underline;
+        color: rgb(121, 134, 143);
+    }
+    h1 {
+        margin-bottom: 15px;
+    }
+    #fecha {
+        margin-bottom: 15px;
+        color: rgb(174, 174, 174);
+    }
+    img {
+        width: 100%;
+        max-height: 300px;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+    #continuar {
+        display: inline-block;
+        margin: 10px 0 20px 0;
+    }
+}
+aside {
+    flex: 0 0 30%;
+    background-color: #343f61;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .redes {
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: fit-content;
+            }
+
+            img {
+                height: 2em;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}
+.articulo {
+    article {
+        img {
+            max-height: 400px;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+.hero {
+    article {
+        background-image:  
+            linear-gradient(to right,
+            #000000d2,
+            #000000b3 30%,
+            #00000000 70%),
+            url("./img/luigi_.jpeg");
+        background-size: cover;
+        height: 100vh;
+        padding-top: 50px;
+        position: relative;
+
+        .categorias {
+            z-index: 2;
+            a {
+                z-index: 3;
+            }
+        }
+        h1,p {
+            width: 50%;
+        }
+        h1 {
+            font-size: 80px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+}
+.clickable {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.publicaciones {
+    background-color: #212134;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 0;
+    
+    article {
+        width: 30%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    
+}
