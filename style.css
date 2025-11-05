@@ -2,22 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 a {
-    color: rgb(232, 232, 232)
+    color: #2F682F
 }
-p {
-    color: rgb(232, 232, 232)
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
     display: flex;
-    background-color: #181826;
+    background-color: #EBEDEC;
     align-items: center;
     justify-content: end;
     gap: 20px;
     padding: 10px 40px 10px 20px;
+    border-bottom: rgba(0, 0, 0, 0.116) solid 2px;
     #logo {
         margin-right: auto;
         img {
@@ -33,34 +36,33 @@ main {
     display: flex;
 }
 footer {
-    color: white;
     padding: 40px 0;
-    background-color: #181826;
+    background-color: #EBEDEC;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: rgba(0, 0, 0, 0.116) solid 2px;
+    flex: 1;
 }
 .feed {
     flex: 1;
-    background-color: #212134;
+    background-color: #EBEDEC;
 }
 article {
-    background-color: #212134;
-    padding: 20px 7% 0 7%;
+    padding: 40px 7% 0 7%;
     .categorias {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
         margin-bottom: 15px;
         text-decoration: underline;
-        color: rgb(121, 134, 143);
     }
     h1 {
         margin-bottom: 15px;
     }
     #fecha {
         margin-bottom: 15px;
-        color: rgb(174, 174, 174);
+        color: rgb(97, 97, 97);
     }
     img {
         width: 100%;
@@ -70,35 +72,36 @@ article {
     }
     #continuar {
         display: inline-block;
-        margin: 10px 0 20px 0;
+        margin: 10px 0 40px 0;
+    }
+    hr {
+        color: rgba(0, 0, 0, 0.158);
     }
 }
 aside {
     flex: 0 0 30%;
-    background-color: #343f61;
-    padding: 20px 20px;
+    background-color: #EBEDEC;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    border-left: rgba(0, 0, 0, 0.116) solid 2px;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 
-    .redes {
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+    a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+    }
 
-            a {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                width: fit-content;
-            }
-
-            img {
-                height: 2em;
-                aspect-ratio: 1/1;
-            }
-        }
+    img {
+        height: 2em;
+        aspect-ratio: 1/1;
     }
 }
 .articulo {
@@ -116,6 +119,7 @@ aside {
 }
 .hero {
     article {
+        color: rgb(226, 226, 226);
         background-image:  
             linear-gradient(to right,
             #000000d2,
@@ -123,11 +127,12 @@ aside {
             #00000000 70%),
             url("./img/luigi_.jpeg");
         background-size: cover;
-        height: 100vh;
-        padding-top: 50px;
+        height: clamp(300px, 100vh, 650px);
+        padding: clamp(40px, 10vh, 10vh) 7%;
         position: relative;
 
         .categorias {
+            font-size: 20px;
             z-index: 2;
             a {
                 z-index: 3;
@@ -151,7 +156,7 @@ aside {
     height: 100%;
 }
 .publicaciones {
-    background-color: #212134;
+    background-color: #EBEDEC;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -160,11 +165,38 @@ aside {
     padding: 40px 0;
     
     article {
-        width: 30%;
+        width: clamp(300px,100%,600px);
         padding: 0;
     }
 }
-
+.sobremi {
+    background-color: #EBEDEC;
+    display: flex;
+    padding: 40px 5vw;
+    gap: 40px;
+    #pfp {
+        width: 30%;
+        aspect-ratio: 2/3;
+    }
+    .textbox {
+        h1 {
+            font-size: 60px;
+        }
+        h3 {
+            margin-bottom: 18px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .links {
+            gap: 20px;
+            img {
+                height: 2.5em;
+            }
+            flex-direction: row;
+        }
+    }
+}
 @media (max-width: 768px) {
     
 }
