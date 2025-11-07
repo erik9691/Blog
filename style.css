@@ -5,8 +5,11 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 a {
-    color: #2F682F;
+    color: #b6681f;
     transition: all 0.3s ease;
+}
+img {
+    object-fit: cover;
 }
 body {
     min-height: 100vh;
@@ -25,43 +28,42 @@ input[type=submit] {
     border: 1px solid rgba(0, 0, 0, 0.212);
     border-radius: 12px;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: white;
-    color:#2F682F;
+    color:#b6681f;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.hero article:hover {
-    transform: scale(1.02);
-    filter: brightness(0.9);
-}
-
 ::selection {
     color: white;
-    background:#4fa54f;
+    background:#dd8533;
 }
 
+.hero article:hover {
+    transform: scale(1.02);
+    filter: brightness(0.85);
+}
 a:hover {
     transform: scale(1.1);
-    color: #4fa54f;
+    color: #dd8533;
 }
 a.clickable:hover {
     transform: none;
 }
-input[type=submit]:hover {
-    background-color: #2F682F;
+input[type=submit]:hover,#continuar:hover {
+    background-color: #b6681f;
     color: white;
     transform: scale(1.1);
 }
 input:focus,textarea:focus {
-    border: 2px solid #2F682F;
+    border: 2px solid #b6681f;
 }
 
 
 nav {
     display: flex;
-    background-color: #EBEDEC;
+    background-color: #e9e1d3;
     align-items: center;
     justify-content: end;
     gap: 20px;
@@ -82,17 +84,23 @@ main {
     display: flex;
 }
 footer {
-    padding: 40px 0;
-    background-color: #EBEDEC;
+    padding: 40px;
+    background-color: #e9e1d3;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     border-top: rgba(0, 0, 0, 0.116) solid 2px;
     flex: 1;
+
+    .footcontent {
+        align-self: flex-start;
+    }
 }
 .feed {
     flex: 1;
-    background-color: #EBEDEC;
+    background-color: #e9e1d3;
 }
 article {
     padding: 40px 7% 0 7%;
@@ -114,11 +122,15 @@ article {
         width: 100%;
         max-height: 300px;
         margin-bottom: 20px;
-        object-fit: cover;
+        border-radius: 10px;
     }
     #continuar {
         display: inline-block;
         margin: 10px 0 40px 0;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        border: 1px solid #b6681f;
+        border-radius: 8px;
     }
     hr {
         color: rgba(0, 0, 0, 0.158);
@@ -126,12 +138,23 @@ article {
 }
 aside {
     flex: 0 0 30%;
-    background-color: #EBEDEC;
+    background-color: #e9e1d3;
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     border-left: rgba(0, 0, 0, 0.116) solid 2px;
+}
+.perfil {
+    display: flex;
+    flex-direction: column;
+    img {
+        width: 50%;
+        aspect-ratio: 1/1;
+        align-self: center;
+        border-radius: 10px;
+        margin: 10px 0;
+    }
 }
 .links {
     display: flex;
@@ -154,16 +177,16 @@ aside {
     padding-bottom: 20px;
     article {
         .categorias {
-            font-size: 20px;
+            font-size: 1.25rem;
         }
         img {
             max-height: 400px;
         }
         h1 {
-            font-size: 50px;
+            font-size: 3.125rem;
         }
         p {
-            font-size: 16px;
+            font-size: 1rem;
         }
     }
 }
@@ -172,32 +195,31 @@ aside {
         color: rgb(226, 226, 226);
         background-image:  
             linear-gradient(to right,
-            #000000d2,
-            #000000b3 30%,
-            #00000000 70%),
+            #000000f4,
+            #000000d3 40%,
+            #00000000 80%),
             url("./img/luigi_.jpeg");
         background-size: cover;
-        height: clamp(300px, 100vh, 650px);
+        height: clamp(fit-content, 100vh, 650px);
         padding: clamp(40px, 10vh, 10vh) 7%;
-        position: relative;
-        overflow: hidden;
         transition: transform 0.5s ease, filter 0.5s ease;
+        position: relative;
 
         .categorias {
-            font-size: 20px;
+            font-size: 1.25rem;
             z-index: 2;
             a {
                 z-index: 3;
             }
         }
         h1,p {
-            width: 50%;
+            width: 70%;
         }
         h1 {
-            font-size: 60px;
+            font-size: 3.75rem;
         }
         p {
-            font-size: 20px;
+            font-size: 1.25rem;
         }
     }
 }
@@ -211,13 +233,13 @@ aside {
     transition: none;
 }
 .publicaciones {
-    background-color: #EBEDEC;
+    background-color: #e9e1d3;
     display: flex;
     flex-wrap: wrap;
     align-items: start;
     justify-content: center;
     gap: 20px;
-    padding: 40px 0;
+    padding: 40px 10px;
     
     article {
         width: clamp(300px,100%,600px);
@@ -225,18 +247,18 @@ aside {
     }
 }
 .sobremi {
-    background-color: #EBEDEC;
+    background-color: #e9e1d3;
     display: flex;
     padding: 40px 5vw;
     gap: 40px;
     
     #pfp {
-        width: 30%;
+        width: 30vw;
         aspect-ratio: 2/3;
     }
     .textbox {
         h1 {
-            font-size: 60px;
+            font-size: 3.75rem;
         }
         h3 {
             margin-bottom: 18px;
@@ -254,21 +276,23 @@ aside {
     }
 }
 .contacto {
-    background-color: #EBEDEC;
+    background-color: #e9e1d3;
     width: 100%;
     padding: 40px 10%;
 
     h1 {
-        font-size: 60px;
+        font-size: 3.75rem;
     }
     form {
         display: flex;
         flex-direction: column;
         label {
-            font-size: 16px;
+            font-size: 1rem;
         }
         input[type=text],input[type=email],textarea {
-            font-size: 16px;
+            font-size: 1rem;
+            max-width: 100%;
+            margin-bottom: 10px;
         } 
         input[type=text],input[type=email] {
             width: 30ch;
@@ -278,9 +302,62 @@ aside {
             height: 10ch;
             resize: none;
         }
+        .opciones {
+            margin: 10px 0;
+            input[type="radio"] {
+                display: none;
+            }
+            label {
+                display: inline-block;
+                padding: 0.5em 1em;
+                border: 1px solid #b6681f;
+                border-radius: 8px;
+                margin-right: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            input[type="radio"]:checked + label {
+                background-color: #b6681f;
+                color: white;
+            }
+        }
+    }
+}
+.suscribir {
+    p {
+        margin-bottom: 10px;
+    }
+    button {
+        padding: 0.2em 0.5em;
+        border: 1px solid #b6681f;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+    button:hover {
+        background-color: #b6681f;
+        color: white;
     }
 }
 
 @media (max-width: 768px) {
-    
+    :root {
+        font-size: 12px;
+    }
+    main {
+        flex-direction: column;
+    }
+    .feed {
+        flex: auto
+    }
+    aside {
+        flex: auto;
+    }
+    .sobremi {
+        flex-direction: column;
+
+        #pfp {
+            width: 100%;
+            aspect-ratio: 3/2;
+        }
+    }
 }
