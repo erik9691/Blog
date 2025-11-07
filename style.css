@@ -2,16 +2,62 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 a {
-    color: #2F682F
+    color: #2F682F;
+    transition: all 0.3s ease;
 }
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+input,textarea {
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    border-radius: 10px;
+    padding: 0.2em 0.5em;
+    outline: none;
+}
+input[type=submit] {
+    width: fit-content;
+    padding: 0.5em 1em;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    border-radius: 12px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: white;
+    color:#2F682F;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero article:hover {
+    transform: scale(1.02);
+    filter: brightness(0.9);
+}
+
+::selection {
+    color: white;
+    background:#4fa54f;
+}
+
+a:hover {
+    transform: scale(1.1);
+    color: #4fa54f;
+}
+a.clickable:hover {
+    transform: none;
+}
+input[type=submit]:hover {
+    background-color: #2F682F;
+    color: white;
+    transform: scale(1.1);
+}
+input:focus,textarea:focus {
+    border: 2px solid #2F682F;
+}
+
 
 nav {
     display: flex;
@@ -60,7 +106,7 @@ article {
     h1 {
         margin-bottom: 15px;
     }
-    #fecha {
+    .fecha {
         margin-bottom: 15px;
         color: rgb(97, 97, 97);
     }
@@ -105,7 +151,11 @@ aside {
     }
 }
 .articulo {
+    padding-bottom: 20px;
     article {
+        .categorias {
+            font-size: 20px;
+        }
         img {
             max-height: 400px;
         }
@@ -130,6 +180,8 @@ aside {
         height: clamp(300px, 100vh, 650px);
         padding: clamp(40px, 10vh, 10vh) 7%;
         position: relative;
+        overflow: hidden;
+        transition: transform 0.5s ease, filter 0.5s ease;
 
         .categorias {
             font-size: 20px;
@@ -142,7 +194,7 @@ aside {
             width: 50%;
         }
         h1 {
-            font-size: 80px;
+            font-size: 60px;
         }
         p {
             font-size: 20px;
@@ -152,14 +204,17 @@ aside {
 .clickable {
     display: block;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    transition: none;
 }
 .publicaciones {
     background-color: #EBEDEC;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 20px;
     padding: 40px 0;
@@ -174,6 +229,7 @@ aside {
     display: flex;
     padding: 40px 5vw;
     gap: 40px;
+    
     #pfp {
         width: 30%;
         aspect-ratio: 2/3;
@@ -197,6 +253,34 @@ aside {
         }
     }
 }
+.contacto {
+    background-color: #EBEDEC;
+    width: 100%;
+    padding: 40px 10%;
+
+    h1 {
+        font-size: 60px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-size: 16px;
+        }
+        input[type=text],input[type=email],textarea {
+            font-size: 16px;
+        } 
+        input[type=text],input[type=email] {
+            width: 30ch;
+        }
+        textarea {
+            width: 100ch;
+            height: 10ch;
+            resize: none;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     
 }
