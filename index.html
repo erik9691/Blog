@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <nav>
-        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home">ShawarBlog</a>
+        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home"><p>ShawarBlog</p></a>
         <a href="index.html">Inicio</a>
         <a href="publicaciones.html">Publicaciones</a>
         <a href="categorias.html">Categorías</a>
@@ -33,7 +34,10 @@
                 </div>
                 <h1>Los aliens son reales y no podrás creer cuál es su comida favorita...</h1>
                 <p class="fecha">Publicado por <a href="sobremi.html">Erik Berot</a> en Octubre 2025</p>
-                <img src="./img/luigi_.jpeg" alt="">
+                <picture>
+                    <source media="(max-width:768px)" srcset="./img/alien-mobile.jpeg">
+                    <img src="./img/alien-desktop.jpeg" alt="">
+                </picture>
                 <p>Durante décadas, los gobiernos del mundo negaron su existencia. Pero ahora, un informe filtrado de la NASA revela lo impensable: los extraterrestres son reales... y tienen hambre.</p>
                 <a id="continuar" href="articulo2.html">Continuar Leyendo...</a>
                 <hr>
@@ -45,7 +49,10 @@
                 </div>
                 <h1>Desentierran momia de 3.000 años y sorprende al mundo: sostenía un shawarma perfectamente conservado</h1>
                 <p class="fecha">Publicado por <a href="sobremi.html">Erik Berot</a> en Octubre 2025</p>
-                <img src="./img/luigi_.jpeg" alt="">
+                <picture>
+                    <source media="(max-width:768px)" srcset="./img/momia-mobile.jpg">
+                    <img src="./img/momia-desktop.jpg" alt="">
+                </picture>
                 <p>Arqueólogos en Egipto hicieron un hallazgo que ha dejado perplejo al mundo entero: una momia de 3.000 años de antigüedad fue desenterrada sosteniendo, sorprendentemente, un shawarma perfectamente conservado.</p>
                 <a id="continuar" href="articulo3.html">Continuar Leyendo...</a>
             </article>
@@ -53,7 +60,7 @@
         <aside>
             <section class="perfil">
                 <h1>Hola, soy Erik</h1>
-                <img src="./img/luigi_.jpeg" alt="Foto de Erik">
+                <img src="./img/erik-foto.jpg" alt="Foto de Erik">
                 <p>Soy un estudiante en Gestión de Tecnología de la Información en UADE. Este es mi Blog donde verás todos mis artículos.</p>
             </section>
             <section class="redes">
@@ -76,8 +83,8 @@
             <section class="suscribir">
                 <h1>Suscríbete</h1>
                 <p>Para tener más noticias sabrosas del shawarma!</p>
-                <form action="gracias.html" >
-                    <input type="email" name="mail" id="mail" placeholder="nombre@correo.com">
+                <form id="suscribir-form">
+                    <input type="email" name="mail" id="mail" placeholder="nombre@correo.com" required>
                     <button type="submit">-></button>
                 </form>
             </section>
@@ -97,5 +104,10 @@
         </section>
         <p>Erik Berot 2025</p>
     </footer>
+
+    <dialog class="modal">
+        <button>X</button>
+        <h1>Gracias por suscribirte!</h1>
+    </dialog>
 </body>
 </html>

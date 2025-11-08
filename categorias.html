@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <nav>
-        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home">ShawarBlog</a>
+        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home"><p>ShawarBlog</p></a>
         <a href="index.html">Inicio</a>
         <a href="publicaciones.html">Publicaciones</a>
+        <a href="categorias.html">Categorías</a>
         <a href="sobremi.html">Sobre Sitio</a>
         <a href="contacto.html">Contacto</a>
     </nav>
@@ -20,22 +22,22 @@
             <div class="publicaciones">
                 <div class="cat-card">
                     <a class="clickable" href="religion.html"></a>
-                    <img src="./img/luigi_.jpeg" alt="Religión">
+                    <img src="./img/religion.jpg" alt="Religión">
                     <p>RELIGION</p>
                 </div>
                 <div class="cat-card">
                     <a class="clickable" href="aliens.html"></a>
-                    <img src="./img/luigi_.jpeg" alt="Aliens">
+                    <img src="./img/aliens.jpg" alt="Aliens">
                     <p>ALIENS</p>
                 </div>
                 <div class="cat-card">
                     <a class="clickable" href="historia.html"></a>
-                    <img src="./img/luigi_.jpeg" alt="Historia">
+                    <img src="./img/historia.jpg" alt="Historia">
                     <p>HISTORIA</p>
                 </div>
                 <div class="cat-card">
                     <a class="clickable" href="ciencia.html"></a>
-                    <img src="./img/luigi_.jpeg" alt="Ciencia">
+                    <img src="./img/ciencia.jpeg" alt="Ciencia">
                     <p>CIENCIA</p>
                 </div>
             </div>
@@ -46,18 +48,31 @@
             <section class="suscribir">
                 <h1>Suscríbete</h1>
                 <p>Para tener más noticias sabrosas del shawarma!</p>
-                <form action="gracias.html" >
-                    <input type="email" name="mail" id="mail" placeholder="nombre@correo.com">
+                <form id="suscribir-form">
+                    <input type="email" name="mail" id="mail" placeholder="nombre@correo.com" required>
                     <button type="submit">-></button>
                 </form>
             </section>
+            <nav>
+                <a href="index.html" id="logo">ShawarBlog</a>
+                <a href="index.html">Inicio</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="sobremi.html">Sobre Sitio</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
             <section class="publicidad">
-                <h1>No te olvides de visitar Shawarma Al Amir!</h1>
+                <h1>Shawarma Al Amir!</h1>
                 <a href="https://www.instagram.com/shawarma_alamir/"><img src="./img/alamir.jpg" alt=""></a>
                 <p>Los más sabrosos shawarmas de CABA</p>
             </section>
         </section>
         <p>Erik Berot 2025</p>
     </footer>
+
+    <dialog class="modal">
+        <button>X</button>
+        <h1>Gracias por suscribirte!</h1>
+    </dialog>
 </body>
 </html>

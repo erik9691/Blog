@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <nav>
-        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home"></a>
+        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home"><p>ShawarBlog</p></a>
         <a href="index.html">Inicio</a>
         <a href="publicaciones.html">Publicaciones</a>
+        <a href="categorias.html">Categorías</a>
         <a href="sobremi.html">Sobre Sitio</a>
         <a href="contacto.html">Contacto</a>
     </nav>
@@ -24,7 +26,10 @@
                     </div>
                     <h1>Este hombre decidió comer solo shawarma por 1 año, al día 100 vio Alá</h1>
                     <p class="fecha">Publicado por <a href="">Erik Berot</a> en Octubre 2025</p>
-                    <img src="./img/luigi_.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width:768px)" srcset="./img/ala-mobile.jpeg">
+                        <img src="./img/ala-desktop.jpeg" alt="">
+                    </picture>
                     <p>En un experimento que nadie pidió pero todos necesitamos leer, Martín Gutiérrez, un diseñador gráfico de 32 años, decidió desafiar los límites de la nutrición humana comiendo exclusivamente shawarma durante un año entero.</p>
                     <a id="continuar" href="articulo1.html">Continuar Leyendo...</a>
                 </article>
@@ -34,7 +39,10 @@
                     </div>
                     <h1>Los aliens son reales y no podrás creer cuál es su comida favorita...</h1>
                     <p class="fecha">Publicado por <a href="">Erik Berot</a> en Octubre 2025</p>
-                    <img src="./img/luigi_.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width:768px)" srcset="./img/alien-mobile.jpeg">
+                        <img src="./img/alien-desktop.jpeg" alt="">
+                    </picture>
                     <p>Durante décadas, los gobiernos del mundo negaron su existencia. Pero ahora, un informe filtrado de la NASA revela lo impensable: los extraterrestres son reales... y tienen hambre.</p>
                     <a id="continuar" href="articulo2.html">Continuar Leyendo...</a>
                 </article>
@@ -45,7 +53,10 @@
                     </div>
                     <h1>Desentierran momia de 3.000 años y sorprende al mundo: sostenía un shawarma perfectamente conservado</h1>
                     <p class="fecha">Publicado por <a href="">Erik Berot</a> en Octubre 2025</p>
-                    <img src="./img/luigi_.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width:768px)" srcset="./img/momia-mobile.jpg">
+                        <img src="./img/momia-desktop.jpg" alt="">
+                    </picture>
                     <p>Arqueólogos en Egipto hicieron un hallazgo que ha dejado perplejo al mundo entero: una momia de 3.000 años de antigüedad fue desenterrada sosteniendo, sorprendentemente, un shawarma perfectamente conservado.</p>
                     <a id="continuar" href="articulo3.html">Continuar Leyendo...</a>
                 </article>
@@ -55,7 +66,10 @@
                     </div>
                     <h1>Investigadores descubren planta que sabe a shawarma</h1>
                     <p class="fecha">Publicado por <a href="">Erik Berot</a> en Octubre 2025</p>
-                    <img src="./img/luigi_.jpeg" alt="">
+                    <picture>
+                        <source media="(max-width:768px)" srcset="./img/planta-mobile.jpg">
+                        <img src="./img/planta-desktop.jpg" alt="">
+                    </picture>
                     <p>Un grupo de botánicos ha identificado una planta que, al ser cocinada, tiene un sabor sorprendentemente similar al shawarma. Los chefs ya planean usarla en sus menús.</p>
                     <a id="continuar" href="articulo4.html">Continuar Leyendo...</a>
                 </article>
@@ -64,7 +78,35 @@
         
     </main>
     <footer>
-        Erik Berot 2025
+        <section class="footcontent">
+            <section class="suscribir">
+                <h1>Suscríbete</h1>
+                <p>Para tener más noticias sabrosas del shawarma!</p>
+                <form id="suscribir-form">
+                    <input type="email" name="mail" id="mail" placeholder="nombre@correo.com" required>
+                    <button type="submit">-></button>
+                </form>
+            </section>
+            <nav>
+                <a href="index.html" id="logo">ShawarBlog</a>
+                <a href="index.html">Inicio</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="sobremi.html">Sobre Sitio</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <section class="publicidad">
+                <h1>Shawarma Al Amir!</h1>
+                <a href="https://www.instagram.com/shawarma_alamir/"><img src="./img/alamir.jpg" alt=""></a>
+                <p>Los más sabrosos shawarmas de CABA</p>
+            </section>
+        </section>
+        <p>Erik Berot 2025</p>
     </footer>
+
+    <dialog class="modal">
+        <button>X</button>
+        <h1>Gracias por suscribirte!</h1>
+    </dialog>
 </body>
 </html>

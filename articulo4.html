@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <nav>
-        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home"></a>
+        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home"><p>ShawarBlog</p></a>
         <a href="index.html">Inicio</a>
         <a href="publicaciones.html">Publicaciones</a>
+        <a href="categorias.html">Categorías</a>
         <a href="sobremi.html">Sobre Sitio</a>
         <a href="contacto.html">Contacto</a>
     </nav>
@@ -22,7 +24,10 @@
                 </div>
                 <h1>Investigadores descubren planta que sabe a shawarma</h1>
                 <p class="fecha">Publicado por <a href="">Erik Berot</a> en Octubre 2025</p>
-                <img src="./img/luigi_.jpeg" alt="">
+                <picture>
+                    <source media="(max-width:768px)" srcset="./img/planta-mobile.jpg">
+                    <img src="./img/planta-desktop.jpg" alt="">
+                </picture>
                 <p>Un grupo de botánicos ha hecho un descubrimiento que ha dejado al mundo culinario boquiabierto: han identificado una planta que, al ser cocinada, tiene un sabor sorprendentemente similar al <strong>shawarma</strong>.</p><br>
 
                 <p>El hallazgo se realizó en un remoto valle del Medio Oriente, donde la planta, llamada provisionalmente <strong>"marihuarma"</strong>, crece de manera silvestre. Los investigadores explican que sus hojas contienen una mezcla natural de especias que recuerdan a la carne especiada y las salsas típicas de un shawarma.</p><br>
@@ -39,7 +44,35 @@
         </div>
     </main>
     <footer>
-        Erik Berot 2025
+        <section class="footcontent">
+            <section class="suscribir">
+                <h1>Suscríbete</h1>
+                <p>Para tener más noticias sabrosas del shawarma!</p>
+                <form id="suscribir-form">
+                    <input type="email" name="mail" id="mail" placeholder="nombre@correo.com" required>
+                    <button type="submit">-></button>
+                </form>
+            </section>
+            <nav>
+                <a href="index.html" id="logo">ShawarBlog</a>
+                <a href="index.html">Inicio</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="sobremi.html">Sobre Sitio</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <section class="publicidad">
+                <h1>Shawarma Al Amir!</h1>
+                <a href="https://www.instagram.com/shawarma_alamir/"><img src="./img/alamir.jpg" alt=""></a>
+                <p>Los más sabrosos shawarmas de CABA</p>
+            </section>
+        </section>
+        <p>Erik Berot 2025</p>
     </footer>
+
+    <dialog class="modal">
+        <button>X</button>
+        <h1>Gracias por suscribirte!</h1>
+    </dialog>
 </body>
 </html>

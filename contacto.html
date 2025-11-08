@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <nav>
-        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home"></a>
+        <a href="index.html" id="logo"><img src="./img/logo.png" alt="Home"><p>ShawarBlog</p></a>
         <a href="index.html">Inicio</a>
         <a href="publicaciones.html">Publicaciones</a>
+        <a href="categorias.html">Categorías</a>
         <a href="sobremi.html">Sobre Sitio</a>
         <a href="contacto.html">Contacto</a>
     </nav>
     <main>
         <div class="contacto">
             <h1>Hablemos!</h1>
-            <form action="recibido.html">
+            <form id="contact-form">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre">
+                <input type="text" name="nombre" id="nombre" required>
                 <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" id="apellido">
+                <input type="text" name="apellido" id="apellido" required>
                 <label for="mail">Email</label>
-                <input type="email" name="mail" id="mail">
+                <input type="email" name="mail" id="mail" required>
                 <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje"></textarea>
+                <textarea name="mensaje" id="mensaje" required></textarea>
                 <legend>¿Cual es tu categoría favorita?</legend>
                 <div class="opciones">
                     <input type="radio" name="categoria" id="historia" value="historia">
@@ -45,7 +47,40 @@
         </div>
     </main>
     <footer>
-        Erik Berot 2025
+        <section class="footcontent">
+            <section class="suscribir">
+                <h1>Suscríbete</h1>
+                <p>Para tener más noticias sabrosas del shawarma!</p>
+                <form id="suscribir-form">
+                    <input type="email" name="mail" id="mail" placeholder="nombre@correo.com" required>
+                    <button type="submit">-></button>
+                </form>
+            </section>
+            <nav>
+                <a href="index.html" id="logo">ShawarBlog</a>
+                <a href="index.html">Inicio</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="sobremi.html">Sobre Sitio</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <section class="publicidad">
+                <h1>Shawarma Al Amir!</h1>
+                <a href="https://www.instagram.com/shawarma_alamir/"><img src="./img/alamir.jpg" alt=""></a>
+                <p>Los más sabrosos shawarmas de CABA</p>
+            </section>
+        </section>
+        <p>Erik Berot 2025</p>
     </footer>
+
+    <dialog class="modal">
+        <button>X</button>
+        <h1>Gracias por suscribirte!</h1>
+    </dialog>
+
+    <dialog class="modal contact-modal">
+        <button>X</button>
+        <h1>Gracias por contactarte!</h1>
+    </dialog>
 </body>
 </html>

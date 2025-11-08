@@ -251,14 +251,15 @@ aside {
     }
 }
 .hero {
+    overflow: hidden;
     article {
         color: rgb(226, 226, 226);
         background-image:  
             linear-gradient(to right,
             #000000f4,
             #000000d3 40%,
-            #00000000 80%),
-            url("./img/luigi_.jpeg");
+            #00000000 100%),
+            url("./img/ala-desktop.jpeg");
         background-size: cover;
         height: clamp(fit-content, 100vh, 650px);
         padding: clamp(40px, 10vh, 10vh) 7%;
@@ -423,6 +424,7 @@ aside {
     color: var(--accent-color);
     transition: all 0.5s ease;
     position: relative;
+    width: clamp(300px,100%,300px);
 
     p {
         font-size: 1.25rem;
@@ -432,6 +434,8 @@ aside {
     img {
         border-radius: 12px;
         margin-bottom: 10px;
+        width: 100%;
+        aspect-ratio: 1/1;
     }
 }
 .cat-card:hover {
@@ -439,10 +443,35 @@ aside {
     color: white;
     transform: translateY(-20px);
 }
+.modal {
+    padding: 2%;
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 15px;
+    background-color: #e9e1d3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    button{
+        position: absolute;
+        top: 2%;
+        right: 3%;
+        color: red;
+        background: none;
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
 
 @media (max-width: 768px) {
     :root {
-        font-size: 12px;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 2rem;
     }
     main {
         flex-direction: column;
@@ -466,5 +495,11 @@ aside {
         align-items: center;
         gap: 30px;
         text-align: center;
+    }
+    .hero article h1,p {
+        width: 100%;
+    }
+    nav #logo p {
+        display: none;
     }
 }
