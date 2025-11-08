@@ -387,6 +387,7 @@ aside {
                 border: 1px solid var(--accent-color);
                 border-radius: 8px;
                 margin-right: 10px;
+                margin-bottom: 5px;
                 cursor: pointer;
                 transition: all 0.3s ease;
             }
